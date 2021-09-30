@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative !important;
+        height: 100% !important;
+      }
+
+      body {
+        background: #eee !important;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
+        font-size: 14px !important;
+        color: #000 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      #swiper {
+        width: 100% !important;
+        height: 100% !important;
+      }
+
+      #swiper-slide {
+        text-align: center !important;
+        font-size: 18px !important;
+        background: #fff !important;
+
+        /* Center slide text vertically */
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
+        display: -webkit-flex !important;
+        display: flex !important;
+        -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+        -webkit-justify-content: center !important;
+        justify-content: center !important;
+        -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+        -webkit-align-items: center !important;
+        align-items: center !important;
+      }
+
+      #swiper-slide img {
+        display: block ;
+        width: 100% ;
+        height: 100% ;
+        object-fit: cover ;
+      }
+
+      .swiper-button{
+        color:black;
+        width: calc(var(--swiper-navigation-size)/ 30 * 20) !important;
+        height: var(--swiper-navigation-size);
+      }
+
+    </style>
+  </head>
+
+  <body class="text-center">
+    <div class="container">
+        <div class="mt-5 row">
+            <div class="swiper mySwiper" id="swiper" style="height: 200px!important;">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" id="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide" id="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide" id="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide" id="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide" id="swiper-slide">Slide 5</div>
+                    <div class="swiper-slide" id="swiper-slide">Slide 6</div>
+                    <div class="swiper-slide" id="swiper-slide">Slide 7</div>
+                    <div class="swiper-slide" id="swiper-slide">Slide 8</div>
+                    <div class="swiper-slide" id="swiper-slide">Slide 9</div>
+                </div>
+                <div class="swiper-button-next swiper-button"></div>
+                <div class="swiper-button-prev swiper-button"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        loop:true,
+        loopFillGroupWithBlank:true,
+        navigation:{
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        },
+        breakpoints: {
+            '1250': {
+                slidesPerView: 4,
+                spaceBetween: 30
+            },
+            '992': {
+                slidesPerView: 3,
+                spaceBetween: 20
+            },
+            '450':{
+                slidesPerView: 2,
+                spaceBetween: 10
+            },
+            '0':{
+                slidesPerView: 1,
+                spaceBetween: 10
+            }
+        }
+      });
+    </script>
+  </body>
+</html>
+
+
+<!-- <div class="d-flex flex-column justify-content-center align-items-center" id="refContainer">
+  <div class="row w-100" id="refInnerDiv">
+      <div class="mx-5 row" id=>
+          <div id="imgContainer"><img src="https://via.placeholder.com/300"></div>
+          <div id="imgContainer"><img src="https://via.placeholder.com/300"></div>
+          <div id="imgContainer"><img src="https://via.placeholder.com/300"></div>
+          <div id="imgContainer"><img src="https://via.placeholder.com/300"></div>
+          <div id="imgContainer"><img src="https://via.placeholder.com/300"></div>
+          <div id="imgContainer"><img src="https://via.placeholder.com/300"></div>
+          <div id="imgContainer"><img src="https://via.placeholder.com/300"></div>
+          <div id="imgContainer"><img src="https://via.placeholder.com/300"></div>
+      </div>
+  </div>
+</div> -->
